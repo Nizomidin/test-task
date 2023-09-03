@@ -55,7 +55,8 @@ function Login()
             onChange={handleChangePassword}
           />
         </div>
-        <button type="submit">Login</button>
+        <button className="form-group" type="submit">Login</button>
+        <button onClick={() => window.location.href = 'register'} className="form-group">Register</button>
       </form>
     </div>
     );

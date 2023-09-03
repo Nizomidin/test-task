@@ -78,7 +78,6 @@
   font-weight: bold;
   color: #007bff;
 }
-/* LoginPage.css */
 .login-container {
   max-width: 400px;
   margin: 0 auto;
@@ -88,6 +87,9 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
 }
 
 .login-container h1 {
@@ -111,10 +113,25 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
+.product-input {
+  width: 50% !important;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 button {
-  display: block;
   width: 100%;
+  padding: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.product-button {
+  width: 50%;
   padding: 5px;
   background-color: #007bff;
   color: #fff;

@@ -40,13 +40,11 @@ function Products() {
         let headers = {
             Authorization: `Bearer ${accessToken}`
         }
-    // Fetch data from the API
         fetch(apiUrl, {
             headers: headers
         })
     .then((response) => response.json())
       .then(async (data) => {
-        // Update the state with the retrieved products
         setProducts(await data.results);
         console.log(data.results);
       })
@@ -55,11 +53,11 @@ function Products() {
       });
     }
     return (
-        <div>
+        <center><div>
         <h1>Product List</h1>
         <div>
             <label>Limit:</label>
-            <input
+            <input className="product-input"
             type="number"
             value={limit}
             onChange={(e) => setLimit(e.target.value)}
@@ -67,7 +65,7 @@ function Products() {
         </div>
         <div>
             <label>Offset:</label>
-            <input
+            <input className="product-input"
             type="number"
             value={offset}
             onChange={(e) => setOffset(e.target.value)}
@@ -75,14 +73,14 @@ function Products() {
         </div>
         <div>
             <label>Search:</label>
-            <input
+            <input className="product-input"
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             />
-        </div>
+        </div> <br />
         <div>
-            <button onClick={Request}>Request</button>
+            <button className="product-button" onClick={Request}>Request</button>
         </div>
             {products.map((product) => (
              <div className="product-card">
@@ -94,7 +92,7 @@ function Products() {
             </div>
             </div>
             ))}
-        </div>
+        </div></center>
       );
 }
 
